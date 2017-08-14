@@ -10,8 +10,6 @@ import android.widget.Button;
 import java.util.Arrays;
 import java.util.List;
 
-import static android.R.attr.scaleX;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 // Animate the shape width, top, bottom, and color.
                 float scaleToFillWidth = (float) rootView.getWidth() / shapeView.getWidth();
                 ObjectAnimator shape2ScaleXAnimator =
-                        ObjectAnimator.ofFloat(shapeView, String.valueOf(scaleX), 1f, scaleToFillWidth).setDuration(duration);
+                        ObjectAnimator.ofFloat(shapeView, "scaleX", 1f, scaleToFillWidth).setDuration(duration);
                 shape2ScaleXAnimator.start();
 
                 // Set the top to be the top of the first TextView.
